@@ -8,19 +8,19 @@ export const teacherAPI = {
   },
 
   createClass: async (data) => {
-    return axios.post('/api/classes', data);
+    return axios.post('/classes', data);
   },
 
   getClasses: async () => {
-    return axios.get('/api/classes?teacher=me');
+    return axios.get('/classes?teacher=me');
   },
 
   deleteClass: async (id) => {
-    return axios.delete(`/api/classes/${id}`);
+    return axios.delete(`/classes/${id}`);
   },
 
   updateClass: async (id, data) => {
-    return axios.put(`/api/classes/${id}`, data);
+    return axios.put(`/classes/${id}`, data);
   },
 
   uploadMaterial: async (classId, file, title, description) => {
@@ -29,7 +29,7 @@ export const teacherAPI = {
     formData.append('title', title);
     if (description) formData.append('description', description);
 
-    return axios.post(`/api/materials/${classId}`, formData, {
+    return axios.post(`/materials/${classId}`, formData, {
       headers: {
         'Content-Type': 'multipart/form-data',
       },
@@ -37,29 +37,29 @@ export const teacherAPI = {
   },
 
   getMaterials: async (classId) => {
-    return axios.get(`/api/materials/${classId}`);
+    return axios.get(`/materials/${classId}`);
   },
 
   createAssignment: async (data) => {
     // data can contain file if we decide to allow attachments for assignment descriptions
     // For now assuming simple JSON creation
-    return axios.post('/api/assignments', data);
+    return axios.post('/assignments', data);
   },
 
   getAllAssignments: async () => {
-    return axios.get('/api/teacher/assignments');
+    return axios.get('/teacher/assignments');
   },
 
   getAssignments: async (classId) => {
-    return axios.get(`/api/assignments/class/${classId}`);
+    return axios.get(`/assignments/class/${classId}`);
   },
 
   getSubmissions: async (assignmentId) => {
-    return axios.get(`/api/assignments/${assignmentId}/submissions`);
+    return axios.get(`/assignments/${assignmentId}/submissions`);
   },
 
   gradeSubmission: async (submissionId, grade, feedback) => {
-    return axios.put(`/api/assignments/submission/${submissionId}`, { grade, feedback });
+    return axios.put(`/assignments/submission/${submissionId}`, { grade, feedback });
   },
 
   startLiveClass: async (classId) => {
@@ -68,11 +68,11 @@ export const teacherAPI = {
   },
 
   markAttendance: async (data) => {
-    return axios.post('/api/attendance', data);
+    return axios.post('/attendance', data);
   },
 
   getClassAttendance: async (classId, date) => {
-    let url = `/api/attendance/class/${classId}`;
+    let url = `/attendance/class/${classId}`;
     if (date) {
       url += `?date=${date}`;
     }
@@ -80,7 +80,7 @@ export const teacherAPI = {
   },
 
   getClassStudents: async (classId) => {
-    const response = await axios.get(`/api/classes/${classId}`);
+    const response = await axios.get(`/classes/${classId}`);
     // Return accessing students array from the class object
     return { data: response.data.students };
   }

@@ -50,42 +50,42 @@ const path = require('path');
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 app.get('/', (req, res) => {
-    res.send('API is running...');
+  res.send('API is running...');
 });
 
 // Health endpoint to verify server and DB connectivity
 app.get('/api/health', async (req, res) => {
-    try {
-        const mongoose = require('mongoose');
-        const connected = mongoose.connection.readyState === 1;
-        const host = mongoose.connection.host || null;
-        const nodeVersion = process.version;
-        const mongooseVersion = mongoose.version || require('mongoose/package.json').version;
-        const uptime = process.uptime();
-        const env = process.env.NODE_ENV || 'development';
-        const usingAtlas = !!(process.env.MONGO_URI && process.env.MONGO_URI.includes('mongodb+srv'));
+  try {
+    const mongoose = require('mongoose');
+    const connected = mongoose.connection.readyState === 1;
+    const host = mongoose.connection.host || null;
+    const nodeVersion = process.version;
+    const mongooseVersion = mongoose.version || require('mongoose/package.json').version;
+    const uptime = process.uptime();
+    const env = process.env.NODE_ENV || 'development';
+    const usingAtlas = !!(process.env.MONGO_URI && process.env.MONGO_URI.includes('mongodb+srv'));
 
-        res.json({
-            ok: true,
-            env,
-            nodeVersion,
-            mongooseVersion,
-            uptime,
-            dbConnected: connected,
-            dbHost: host,
-            usingAtlas
-        });
-    } catch (err) {
-        res.status(500).json({ ok: false, error: err.message });
-    }
+    res.json({
+      ok: true,
+      env,
+      nodeVersion,
+      mongooseVersion,
+      uptime,
+      dbConnected: connected,
+      dbHost: host,
+      usingAtlas
+    });
+  } catch (err) {
+    res.status(500).json({ ok: false, error: err.message });
+  }
 });
 
 
 
 // Global error handler to ensure JSON response on unhandled errors
 app.use((err, req, res, next) => {
-    console.error('Unhandled error:', err.stack || err);
-    res.status(500).json({ message: err.message || 'Server error' });
+  console.error('Unhandled error:', err.stack || err);
+  res.status(500).json({ message: err.message || 'Server error' });
 });
 
 const PORT = process.env.PORT || 5000;

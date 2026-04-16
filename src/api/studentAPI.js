@@ -20,17 +20,17 @@ export const studentAPI = {
   },
 
   getMaterials: async (classId) => {
-    return axios.get(`/api/materials/${classId}`);
+    return axios.get(`/materials/${classId}`);
   },
 
   getAssignments: async (classId) => {
-    return axios.get(`/api/assignments/class/${classId}`);
+    return axios.get(`/assignments/class/${classId}`);
   },
 
   submitAssignment: async (assignmentId, file) => {
     const formData = new FormData();
     formData.append('file', file);
-    return axios.post(`/api/assignments/${assignmentId}/submit`, formData, {
+    return axios.post(`/assignments/${assignmentId}/submit`, formData, {
       headers: {
         'Content-Type': 'multipart/form-data',
       },
@@ -38,7 +38,7 @@ export const studentAPI = {
   },
 
   getAttendance: async () => {
-    return axios.get('/api/attendance/student');
+    return axios.get('/attendance/student');
   },
 
   joinLiveClass: async (classId) => {

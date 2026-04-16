@@ -12,15 +12,15 @@ export const classAPI = {
   },
 
   getGlobalAnnouncements: async () => {
-    return axios.get('/api/announcements');
+    return axios.get('/announcements');
   },
 
   createGlobalAnnouncement: async (data) => {
-    return axios.post('/api/announcements', data);
+    return axios.post('/announcements', data);
   },
 
   deleteAnnouncement: async (id) => {
-    return axios.delete(`/api/announcements/${id}`);
+    return axios.delete(`/announcements/${id}`);
   },
 
   createAnnouncement: async (data, classId) => {
