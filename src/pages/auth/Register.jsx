@@ -34,7 +34,7 @@ export default function Register() {
       const user = await register(name, email, password, role);
       navigate(user.role === 'teacher' ? '/teacher/dashboard' : '/student/dashboard');
     } catch (err) {
-      setError('Registration failed. Please try again.');
+      setError(err.response?.data?.message || 'Registration failed. Please try again.');
     } finally {
       setIsLoading(false);
     }

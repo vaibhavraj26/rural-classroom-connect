@@ -24,7 +24,7 @@ export default function Login() {
       const user = await login(email, password);
       navigate(user.role === 'teacher' ? '/teacher/dashboard' : '/student/dashboard');
     } catch (err) {
-      setError('Invalid credentials.');
+      setError(err.response?.data?.message || 'Invalid credentials.');
     } finally {
       setIsLoading(false);
     }
