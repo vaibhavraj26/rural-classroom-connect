@@ -1,6 +1,6 @@
 import axios from './client';
 
-const API_BASE = '/classes';
+const API_BASE = '/api/classes';
 
 export const classAPI = {
   getClassById: async (classId) => {

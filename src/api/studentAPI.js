@@ -1,6 +1,6 @@
 import axios from './client';
 
-const API_BASE = '/student';
+const API_BASE = '/api/student';
 
 export const studentAPI = {
   getDashboard: async () => {
