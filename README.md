@@ -32,9 +32,9 @@ A powerful, accessible, and lightweight remote learning platform designed specif
 
 | Dashboard | Classes | Assignments |
 | :---: | :---: | :---: |
-| <img src="https://via.placeholder.com/400x250/0f172a/ffffff?text=Dashboard" width="100%" alt="Dashboard" /> | <img src="https://via.placeholder.com/400x250/0f172a/ffffff?text=Classes" width="100%" alt="Classes" /> | <img src="https://via.placeholder.com/400x250/0f172a/ffffff?text=Assignments" width="100%" alt="Assignments" /> |
+| <img src="public/screenshots/dashboard.png" width="100%" alt="Dashboard" /> | <img src="public/screenshots/classes.png" width="100%" alt="Classes" /> | <img src="public/screenshots/assignments.png" width="100%" alt="Assignments" /> |
 | **Announcements** | **Attendance** | **Study Materials** |
-| <img src="https://via.placeholder.com/400x250/0f172a/ffffff?text=Announcements" width="100%" alt="Announcements" /> | <img src="https://via.placeholder.com/400x250/0f172a/ffffff?text=Attendance" width="100%" alt="Attendance" /> | <img src="https://via.placeholder.com/400x250/0f172a/ffffff?text=Study+Materials" width="100%" alt="Materials" /> |
+| <img src="public/screenshots/announcements.png" width="100%" alt="Announcements" /> | <img src="public/screenshots/attendance.png" width="100%" alt="Attendance" /> | <img src="public/screenshots/materials.png" width="100%" alt="Materials" /> |
 
 *(Replace placeholder image URLs with actual project screenshots)*
 
@@ -112,7 +112,7 @@ rural-classroom-connect/
 
 ### Deploy Frontend to Vercel
 1. Create a New Project pointing to your repository.
-2. Under Environment Variables, add `VITE_API_BASE` and set it to your new Render backend URL (e.g. `https://your-backend.onrender.com`).
+2. Under Environment Variables, add `VITE_API_BASE` and set it to your new Render backend URL (e.g. `https://your-backend.onrender.com/api`).
 3. Deploy!
 
 *(Note: If your frontend is hosted on a custom domain, ensure it is added to the `allowedOrigins` array in `backend/server.js` for CORS)*
