@@ -12,7 +12,9 @@ const app = express();
 // Enable CORS for frontend; set CORS_ORIGIN to restrict in production
 // app.use(cors({ origin: process.env.CORS_ORIGIN || '*' }));
 const allowedOrigins = [
-  "https://rural-classroom-connect.vercel.app"
+  "https://rural-classroom-connect.vercel.app",
+  "http://localhost:5173",
+  "http://127.0.0.1:5173"
 ];
 
 app.use(cors({
