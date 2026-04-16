@@ -1,6 +1,6 @@
 import axios from './client';
 
-const API_BASE = '/api/auth';
+const API_BASE = '/auth';
 
 export const authAPI = {
   login: async (email, password) => {
