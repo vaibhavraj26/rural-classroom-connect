@@ -52,7 +52,7 @@ export function Navbar({ onMenuClick, showMenuButton = false }) {
 
         <Link to="/" className="flex items-center gap-2 font-display font-bold text-xl">
           <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-            <GraduationCap className="h-5 w-5" />
+            <GraduationCap className="h-6 w-6" />
           </div>
           <span className="hidden sm:inline-block text-foreground">Remote Classroom</span>
         </Link>
