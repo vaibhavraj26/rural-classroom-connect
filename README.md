@@ -1,6 +1,6 @@
 <div align="center">
   
-# 🏫 Rural Classroom Connect (remote classroom)
+# 🏫 Rural Classroom Connect - remote classroom
 
 A powerful, accessible, and lightweight remote learning platform designed specifically for rural colleges, connecting students and teachers effortlessly.
 
