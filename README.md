@@ -1,6 +1,6 @@
 <div align="center">
   
-# 🏫 Rural Classroom Connect
+# 🏫 Rural Classroom Connect (remote classroom)
 
 A powerful, accessible, and lightweight remote learning platform designed specifically for rural colleges, connecting students and teachers effortlessly.
 
@@ -16,7 +16,7 @@ A powerful, accessible, and lightweight remote learning platform designed specif
 
 ## ✨ Features
 
-**Rural Classroom Connect** brings the complete classroom experience online with a focus on simplicity, speed, and low-bandwidth accessibility:
+**Rural Classroom Connect (remote classroom)** brings the complete classroom experience online with a focus on simplicity, speed, and low-bandwidth accessibility:
 
 - 🔐 **Role-based Authentication:** Dedicated flows for **Students** and **Teachers**.
 - 📚 **Classroom Management:** Teachers can create classes, manage students, and monitor engagement.
