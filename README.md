@@ -36,7 +36,7 @@ A powerful, accessible, and lightweight remote learning platform designed specif
 | **Announcements** | **Attendance** | **Study Materials** |
 | <img src="public/screenshots/announcements.png" width="100%" alt="Announcements" /> | <img src="public/screenshots/attendance.png" width="100%" alt="Attendance" /> | <img src="public/screenshots/materials.png" width="100%" alt="Materials" /> |
 
-*(Replace placeholder image URLs with actual project screenshots)*
+
 
 ---
 
